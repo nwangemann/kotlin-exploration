@@ -23,11 +23,22 @@ tailrec fun fib(n: Int, a: BigInteger, b: BigInteger): BigInteger {
 }
 
 fun main(args: Array<String>){
-    practiceFunction()
-    var Guess:String = "default string"
-    var Guess2:String = Guess.doSomething()
-    log(Guess2)
-    println(fib(10, BigInteger("1"), BigInteger("0")))
+
+    fun accum(s:String):String {
+        var a:Array<String> = s.split("").toTypedArray()
+        var array:CharArray = charArrayOf(*a)
+        return array.joinToString()
+    }
+    accum("test")
+
+}
+
+
+//    practiceFunction()
+//    var Guess:String = "default string"
+//    var Guess2:String = Guess.doSomething()
+//    log(Guess2)
+//    println(fib(10, BigInteger("1"), BigInteger("0")))
 
 //    for(i in 1 until 10){
 //        println("$i is the current number")
@@ -43,4 +54,3 @@ fun main(args: Array<String>){
 //    } catch (e: ArithmeticException){
 //        println(e)
 //    }
-}
