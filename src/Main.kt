@@ -39,6 +39,11 @@ fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
     return points
 }
 
+fun aVeryBigSum(ar: Array<Long>): Long {
+    val sumOfArray:Long = ar.sum()
+    return sumOfArray
+}
+
 fun main(args: Array<String>){
 
     fun accum(s:String):String {
@@ -49,6 +54,7 @@ fun main(args: Array<String>){
     var area = calculateArea(3)
     println(area)
     accum("test")
+    println("new changes")
 
 }
 
