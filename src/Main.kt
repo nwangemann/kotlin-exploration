@@ -44,6 +44,13 @@ fun aVeryBigSum(ar: Array<Long>): Long {
     return sumOfArray
 }
 
+fun diagonalDifference(arr: Array<Array<Int>>): Int {
+    var sum1 = arr[0][0] + arr[1][1] + arr[2][2]
+    var sum2 = arr[0][2] + arr[1][1] + arr[2][0]
+    sum1 > sum2 ? return sum1 - sum2 : return sum2 - sum1
+}
+
+
 fun main(args: Array<String>){
 
     fun accum(s:String):String {
