@@ -27,18 +27,32 @@ tailrec fun fib(n: Int, a: BigInteger, b: BigInteger): BigInteger {
     return if (n == 0) b else fib(n -1, a +b, a)
 }
 
+fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
+    var points: Array<Int> = arrayOf(0,0)
+    for(x in 0 until a.size) {
+        if(a[x] > b[x]){
+            points[0]++
+        } else if (b[x] > a[x]){
+            points[1]++
+        }
+    }
+    return points
+}
+
 fun main(args: Array<String>){
 
-//    fun accum(s:String):String {
-//        var a:Array<String> = s.split("").toTypedArray()
-//        var array:CharArray = charArrayOf(*a)
-//        return array.joinToString()
-//    }
+    fun accum(s:String):String {
+        var a:Array<String> = s.split("").toTypedArray()
+        var array:CharArray = charArrayOf(*a)
+        return array.joinToString()
+    }
     var area = calculateArea(3)
     println(area)
     accum("test")
 
 }
+
+
 
 
 //    practiceFunction()
